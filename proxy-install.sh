@@ -1,5 +1,7 @@
 #!/bin/bash
 
+apt update
+apt -y upgrade
 iptables --flush
 apt -y install python3-pip python3.12-venv
 python3 -m venv /root/proxy
