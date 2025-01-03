@@ -14,6 +14,7 @@ ExecStart=/root/proxy/bin/python -m proxy --hostname 0.0.0.0 --port 1111
 WorkingDirectory=/root/proxy
 Restart=always
 User=root
+LimitNOFILE=1048576
 
 [Install]
 WantedBy=multi-user.target
