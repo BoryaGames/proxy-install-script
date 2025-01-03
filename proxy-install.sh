@@ -1,5 +1,6 @@
 #!/bin/bash
 
+iptables --flush
 apt -y install python3-pip python3.12-venv
 python3 -m venv /root/proxy
 /root/proxy/bin/python -m pip install proxy.py
@@ -9,7 +10,7 @@ Description=ProxyPy
 After=network.target
 
 [Service]
-ExecStart=/root/proxy/bin/python -m proxy --hostname 0.0.0.0 --port 9999
+ExecStart=/root/proxy/bin/python -m proxy --hostname 0.0.0.0 --port 1111
 WorkingDirectory=/root/proxy
 Restart=always
 User=root
